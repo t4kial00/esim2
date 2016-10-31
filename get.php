@@ -1,0 +1,20 @@
+<h1>Testataan get-metodia</h1>
+
+<form method="get" action="get.php">
+	<label>Etunimi</label>
+		<input type="text" name="en" placeholder="Etunimi" required="">
+	<br>
+	<label>Sukunimi</label>
+		<input type="text" name="sn" placeholder="Sukunimi" required="">
+	<br>
+	<input type="submit" name="nappi" value="Lähetä">
+</form>
+
+<?php
+	
+	if(isset($_GET['nappi'])){
+		$enimi=$_GET['en'];
+		$snimi=$_GET['sn'];
+		echo "Terve $enimi $snimi";
+	}
+?>
