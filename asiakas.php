@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if($_SESSION['kirjautunut'] != TRUE){
+		header("Location: login.php");
+	}
+
+?>
+
 <?php include 'menu.php'; ?>
 
 <h1>Asiakkaat</h1>
